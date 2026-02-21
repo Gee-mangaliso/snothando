@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Briefcase, Mail, MapPin, Phone } from "lucide-react";
 
 
 const SKILLS = {
@@ -57,14 +57,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="relative border-b border-border bg-primary/10">
+      <header className="relative border-b border-border bg-gradient-to-r from-[hsl(220,30%,12%)] to-[hsl(210,50%,15%)]">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:py-14">
           <div>
             <h1 className="text-glow font-mono text-3xl font-bold tracking-tight text-primary md:text-4xl">
               Mangaliso Snothando
             </h1>
             <p className="mt-1 text-base text-muted-foreground">
-              Software Development Student · Final Year ICT Diploma
+              Application Developer Student · Final Year ICT Diploma
             </p>
           </div>
           <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-end">
@@ -77,9 +77,9 @@ const Index = () => {
             <span className="flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5 text-primary" /> Woodstock, Cape Town
             </span>
-            <Badge variant="secondary" className="mt-1 border border-primary/30 text-xs text-primary">
-              Open to Opportunities
-            </Badge>
+            <span className="flex items-center gap-1.5 text-primary">
+              <Briefcase className="h-3.5 w-3.5" /> Open to Opportunities
+            </span>
           </div>
         </div>
       </header>
