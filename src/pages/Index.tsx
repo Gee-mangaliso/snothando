@@ -57,7 +57,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="relative border-b border-border bg-gradient-to-r from-[hsl(220,30%,12%)] to-[hsl(210,50%,15%)]">
+      <header className="relative border-b border-border bg-[hsl(0,0%,5%)]">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:py-14">
           <div>
             <h1 className="text-glow font-mono text-3xl font-bold tracking-tight text-primary md:text-4xl">
@@ -108,7 +108,7 @@ const Index = () => {
               <EducationEntry
                 title="National Senior Certificate"
                 institution="Zwelakhe Senior Secondary School"
-                year="2023"
+                year="2023 (Completed)"
               />
               <EducationEntry
                 title="Diploma in ICT"
