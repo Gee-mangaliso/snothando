@@ -4,13 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Download, Mail, MapPin, Phone } from "lucide-react";
 
-const NAV_ITEMS = [
-  { label: "Objective", href: "#objective" },
-  { label: "Education", href: "#education" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "References", href: "#references" },
-];
 
 const SKILLS = {
   Languages: [
@@ -64,39 +57,18 @@ const PROJECTS = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Sticky Nav */}
-      <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-          <span className="font-mono text-sm font-bold tracking-wider text-primary">MS</span>
-          <ul className="hidden gap-6 md:flex">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <Button size="sm" className="gap-2">
-            <Download className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">Download CV</span>
-          </Button>
-        </div>
-      </nav>
-
       {/* Header */}
       <header className="grid-bg relative border-b border-border">
-        <div className="mx-auto max-w-5xl px-4 py-16 md:py-24">
-          <h1 className="text-glow font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
-            Mangaliso Snothando
-          </h1>
-          <p className="mt-2 text-lg text-muted-foreground">
-            Software Development Student · Final Year ICT Diploma
-          </p>
-          <div className="mt-6 flex flex-wrap gap-4 text-sm text-muted-foreground">
+        <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-16 md:flex-row md:items-center md:justify-between md:py-24">
+          <div>
+            <h1 className="text-glow font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
+              Mangaliso Snothando
+            </h1>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Software Development Student · Final Year ICT Diploma
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 text-sm text-muted-foreground md:items-end">
             <span className="flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5 text-primary" /> Woodstock, Cape Town
             </span>
@@ -106,6 +78,10 @@ const Index = () => {
             <span className="flex items-center gap-1.5">
               <Mail className="h-3.5 w-3.5 text-primary" /> 241177049@mycput.ac.za
             </span>
+            <Button size="sm" className="mt-2 gap-2">
+              <Download className="h-3.5 w-3.5" />
+              Download CV
+            </Button>
           </div>
         </div>
       </header>
