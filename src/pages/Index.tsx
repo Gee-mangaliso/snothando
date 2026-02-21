@@ -1,8 +1,7 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Download, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 
 const SKILLS = {
@@ -24,7 +23,7 @@ const SKILLS = {
     { name: "Replit" },
     { name: "Fuzen" },
     { name: "Lovable.ai" },
-    { name: "Vibe Coding" },
+    
   ],
 };
 
@@ -58,30 +57,26 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="grid-bg relative border-b border-border">
-        <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-16 md:flex-row md:items-center md:justify-between md:py-24">
+      <header className="relative border-b border-border bg-primary/10">
+        <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:py-14">
           <div>
-            <h1 className="text-glow font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
+            <h1 className="text-glow font-mono text-3xl font-bold tracking-tight text-primary md:text-4xl">
               Mangaliso Snothando
             </h1>
-            <p className="mt-2 text-lg text-muted-foreground">
+            <p className="mt-1 text-base text-muted-foreground">
               Software Development Student · Final Year ICT Diploma
             </p>
           </div>
-          <div className="flex flex-col gap-2 text-sm text-muted-foreground md:items-end">
+          <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-end">
             <span className="flex items-center gap-1.5">
-              <MapPin className="h-3.5 w-3.5 text-primary" /> Woodstock, Cape Town
+              <Mail className="h-3.5 w-3.5 text-primary" /> 241177049@mycput.ac.za
             </span>
             <span className="flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5 text-primary" /> 083 765 9532
             </span>
             <span className="flex items-center gap-1.5">
-              <Mail className="h-3.5 w-3.5 text-primary" /> 241177049@mycput.ac.za
+              <MapPin className="h-3.5 w-3.5 text-primary" /> Woodstock, Cape Town
             </span>
-            <Button size="sm" className="mt-2 gap-2">
-              <Download className="h-3.5 w-3.5" />
-              Download CV
-            </Button>
           </div>
         </div>
       </header>
