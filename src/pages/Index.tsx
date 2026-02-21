@@ -77,6 +77,9 @@ const Index = () => {
             <span className="flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5 text-primary" /> Woodstock, Cape Town
             </span>
+            <Badge variant="secondary" className="mt-1 border border-primary/30 text-xs text-primary">
+              Open to Opportunities
+            </Badge>
           </div>
         </div>
       </header>
@@ -103,14 +106,14 @@ const Index = () => {
             <SectionHeading>Education</SectionHeading>
             <div className="space-y-4">
               <EducationEntry
-                title="Diploma in ICT"
-                institution="Cape Peninsula University of Technology"
-                year="2024–2026 (Final Year)"
-              />
-              <EducationEntry
                 title="National Senior Certificate"
                 institution="Zwelakhe Senior Secondary School"
                 year="2023"
+              />
+              <EducationEntry
+                title="Diploma in ICT"
+                institution="Cape Peninsula University of Technology"
+                year="2024–2026 (Final Year)"
               />
             </div>
           </section>
