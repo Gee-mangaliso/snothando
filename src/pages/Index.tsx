@@ -57,17 +57,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="relative border-b border-border bg-[hsl(0,0%,5%)]">
+      <header className="relative border-b border-border bg-[hsl(0,0%,95%)]">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:py-14">
           <div>
-            <h1 className="text-glow font-mono text-3xl font-bold tracking-tight text-primary md:text-4xl">
+            <h1 className="font-mono text-3xl font-bold tracking-tight text-[hsl(220,20%,15%)] md:text-4xl">
               Mangaliso Snothando
             </h1>
-            <p className="mt-1 text-base text-muted-foreground">
+            <p className="mt-1 text-base text-[hsl(220,10%,40%)]">
               Application Developer Student · Final Year ICT Diploma
             </p>
           </div>
-          <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-end">
+          <div className="flex flex-col gap-1.5 text-sm text-[hsl(220,10%,35%)] md:items-end">
             <span className="flex items-center gap-1.5">
               <Mail className="h-3.5 w-3.5 text-primary" /> 241177049@mycput.ac.za
             </span>
