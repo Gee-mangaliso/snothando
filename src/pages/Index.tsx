@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase, Building, Mail, MapPin, Phone, User } from "lucide-react";
+import { Briefcase, Building, Mail, MapPin, Phone, Printer, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 
 const SKILLS = {
@@ -58,6 +59,14 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="relative border-b border-border bg-[#102C3C]">
+        <Button
+          onClick={() => window.print()}
+          variant="outline"
+          size="sm"
+          className="absolute right-4 top-4 print:hidden border-primary/30 text-primary hover:bg-primary/10"
+        >
+          <Printer className="mr-1.5 h-3.5 w-3.5" /> Print
+        </Button>
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:gap-[350px] md:py-14">
           <div className="md:pl-12">
             <h1 className="font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
