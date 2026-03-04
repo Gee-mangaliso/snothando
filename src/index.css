@@ -85,3 +85,37 @@
     background-size: 40px 40px;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    background: hsl(220 20% 7%) !important;
+    color: hsl(210 20% 90%) !important;
+  }
+
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  /* Scale everything to fit one page */
+  .min-h-screen {
+    transform: scale(0.7);
+    transform-origin: top left;
+    width: 142.85%; /* 1/0.7 to compensate */
+  }
+
+  /* Hide print button */
+  .print\\:hidden {
+    display: none !important;
+  }
+}
