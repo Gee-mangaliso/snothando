@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase, Mail, MapPin, Phone } from "lucide-react";
+import { Briefcase, Building, Mail, MapPin, Phone, User } from "lucide-react";
 
 
 const SKILLS = {
@@ -176,10 +176,18 @@ const Index = () => {
             <SectionHeading>References</SectionHeading>
             <div className="space-y-4">
               <div className="border-l-2 border-primary/30 pl-4">
-                <h4 className="text-sm font-semibold text-foreground">Zwelakhe Senior Secondary School</h4>
-                <p className="text-sm text-muted-foreground">Siyabonga Gxula</p>
-                <p className="text-xs text-muted-foreground">gxusiyabonga@gmail.com</p>
-                <p className="text-xs text-muted-foreground">078 766 5384</p>
+                <h4 className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                  <Building className="h-3.5 w-3.5 text-primary" /> Zwelakhe Senior Secondary School
+                </h4>
+                <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                  <User className="h-3.5 w-3.5 text-primary" /> Siyabonga Gxula
+                </p>
+                <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <Mail className="h-3.5 w-3.5 text-primary" /> gxusiyabonga@gmail.com
+                </p>
+                <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <Phone className="h-3.5 w-3.5 text-primary" /> 078 766 5384
+                </p>
               </div>
             </div>
           </section>
