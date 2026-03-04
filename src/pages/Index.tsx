@@ -45,10 +45,10 @@ const PROJECTS = [
     period: "2025 – Present",
     role: "Documentation Lead | Full-Stack E-commerce Application (Team of 5)",
     bullets: [
-      "Responsible for project documentation, including backend and frontend workflow design.",
-      "Developers initially used dummy data for backend–frontend communication; frontend was fully functional but not connected to the database.",
-      "Currently improving the project to ensure seamless communication between the database, backend, and frontend.",
-      "Built technical specifications and guides to assist the team in backend integration.",
+      "Led technical documentation, including backend and frontend workflow design.",
+      "Developers initially used dummy data for API communication; frontend was fully functional but not connected to the database.",
+      "Currently improving database integration processes to ensure seamless communication between the database, backend, and frontend.",
+      "Developed structured technical guides to assist the team in backend integration.",
     ],
   },
 ];
@@ -180,7 +180,14 @@ const Index = () => {
           {/* References */}
           <section id="references">
             <SectionHeading>References</SectionHeading>
-            <p className="text-sm text-muted-foreground">Available upon request.</p>
+            <div className="space-y-4">
+              <div className="border-l-2 border-primary/30 pl-4">
+                <h4 className="text-sm font-semibold text-foreground">Zwelakhe Senior Secondary School</h4>
+                <p className="text-sm text-muted-foreground">Siyabonga Gxula</p>
+                <p className="text-xs text-muted-foreground">gxusiyabonga@gmail.com</p>
+                <p className="text-xs text-muted-foreground">078 766 5384</p>
+              </div>
+            </div>
           </section>
         </div>
       </main>
