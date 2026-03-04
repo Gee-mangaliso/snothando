@@ -63,9 +63,6 @@ const Index = () => {
             <h1 className="text-glow font-mono text-3xl font-bold tracking-tight text-primary md:text-4xl">
               Mangaliso Snothando
             </h1>
-            <p className="mt-1 text-base text-muted-foreground">
-              Application Developer Student · Final Year ICT Diploma
-            </p>
           </div>
           <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-end">
             <span className="flex items-center gap-1.5">
