@@ -89,51 +89,89 @@
 @media print {
   @page {
     size: A4;
-    margin: 8mm;
+    margin: 12mm;
   }
 
-  html, body {
+  * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     color-adjust: exact !important;
   }
 
-  body {
+  html, body {
     background: hsl(220 20% 7%) !important;
     color: hsl(210 20% 90%) !important;
+    font-size: 85% !important;
   }
 
+  /* Fit on one page */
   .min-h-screen {
     min-height: auto !important;
-    transform: scale(0.78);
+    transform: scale(0.82);
     transform-origin: top center;
-    width: 128.2%; /* 1/0.78 */
-    margin-left: -14.1%; /* center it */
+    width: 121.95%; /* 1/0.82 */
+    margin-left: -10.975%;
   }
 
-  /* Ensure two-column grid stays */
+  /* Preserve two-column grid */
   .md\\:grid-cols-\\[2fr_3fr\\] {
     grid-template-columns: 2fr 3fr !important;
     display: grid !important;
   }
 
-  /* Reduce spacing for print */
+  .md\\:gap-12 {
+    gap: 1.5rem !important;
+  }
+
+  /* Reduce vertical spacing */
   .py-12 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .py-10, .md\\:py-14 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
 
   .space-y-10 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 1.5rem !important;
+    margin-top: 1.25rem !important;
   }
 
   .space-y-6 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 1rem !important;
+    margin-top: 0.75rem !important;
   }
 
-  .py-10 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+  .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.5rem !important;
+  }
+
+  .gap-6 {
+    gap: 1rem !important;
+  }
+
+  /* Prevent page breaks inside elements */
+  section, .border-l-2, [class*="CardContent"] {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Card padding reduction */
+  .p-5 {
+    padding: 0.75rem !important;
+  }
+
+  /* Bullet spacing */
+  .space-y-1\\.5 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.25rem !important;
+  }
+
+  .mt-3 {
+    margin-top: 0.5rem !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 0.5rem !important;
   }
 
   /* Hide print button */
