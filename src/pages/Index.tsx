@@ -59,13 +59,13 @@ const Index = () => {
       {/* Header */}
       <header className="relative border-b border-border bg-[hsl(215,25%,15%)]">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:py-14">
-          <div>
+          <div className="md:pl-12">
             <h1 className="font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
               <span className="block">Mangaliso</span>
               <span className="block">Snothando</span>
             </h1>
           </div>
-          <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-end">
+          <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-start">
             <span className="flex items-center gap-1.5">
               <Mail className="h-3.5 w-3.5 text-primary" /> 241177049@mycput.ac.za
             </span>
@@ -146,7 +146,7 @@ const Index = () => {
         <div className="space-y-10">
           {/* Projects */}
           <section id="experience">
-            <SectionHeading>Technical Project Experience</SectionHeading>
+            <SectionHeading>Projects</SectionHeading>
             <div className="space-y-6">
               {PROJECTS.map((project) => (
                 <Card key={project.title} className="border-glow border-border bg-card">
