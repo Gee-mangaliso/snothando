@@ -77,9 +77,6 @@ const Index = () => {
             <span className="flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5 text-primary" /> Woodstock, Cape Town
             </span>
-            <span className="flex items-center gap-1.5 text-primary">
-              <Briefcase className="h-3.5 w-3.5" /> Open to Opportunities
-            </span>
           </div>
         </div>
       </header>
