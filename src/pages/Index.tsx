@@ -60,8 +60,9 @@ const Index = () => {
       <header className="relative border-b border-border bg-[hsl(215,25%,15%)]">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:py-14">
           <div>
-            <h1 className="text-glow font-mono text-3xl font-bold tracking-tight text-primary md:text-4xl">
-              Mangaliso Snothando
+            <h1 className="font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
+              <span className="block">Mangaliso</span>
+              <span className="block">Snothando</span>
             </h1>
           </div>
           <div className="flex flex-col gap-1.5 text-sm text-muted-foreground md:items-end">
