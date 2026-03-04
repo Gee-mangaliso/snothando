@@ -57,7 +57,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="relative border-b border-border bg-[hsl(220,10%,20%)]">
+      <header className="relative border-b border-border bg-[hsl(215,25%,15%)]">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:justify-between md:py-14">
           <div>
             <h1 className="text-glow font-mono text-3xl font-bold tracking-tight text-primary md:text-4xl">
@@ -194,10 +194,6 @@ const Index = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">
-        © 2026 Mangaliso Snothando. All rights reserved.
-      </footer>
     </div>
   );
 };
