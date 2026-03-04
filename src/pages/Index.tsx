@@ -57,7 +57,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="relative border-b border-border bg-[hsl(220,60%,20%)]">
+      <header className="relative border-b border-border bg-[#132A44]">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:gap-[350px] md:py-14">
           <div className="md:pl-12">
             <h1 className="font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
