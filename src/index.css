@@ -89,7 +89,7 @@
 @media print {
   @page {
     size: A4;
-    margin: 0;
+    margin: 8mm;
   }
 
   html, body {
@@ -105,13 +105,35 @@
 
   .min-h-screen {
     min-height: auto !important;
+    transform: scale(0.78);
+    transform-origin: top center;
+    width: 128.2%; /* 1/0.78 */
+    margin-left: -14.1%; /* center it */
   }
 
-  /* Scale everything to fit one page */
-  .min-h-screen {
-    transform: scale(0.7);
-    transform-origin: top left;
-    width: 142.85%; /* 1/0.7 to compensate */
+  /* Ensure two-column grid stays */
+  .md\\:grid-cols-\\[2fr_3fr\\] {
+    grid-template-columns: 2fr 3fr !important;
+    display: grid !important;
+  }
+
+  /* Reduce spacing for print */
+  .py-12 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .space-y-10 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.5rem !important;
+  }
+
+  .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1rem !important;
+  }
+
+  .py-10 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
   }
 
   /* Hide print button */
