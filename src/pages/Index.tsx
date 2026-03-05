@@ -1,8 +1,17 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase, Building, Mail, MapPin, Phone, Printer, User } from "lucide-react";
+import { Building, Download, FileImage, Mail, MapPin, Phone, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useRef, useCallback } from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 
 const SKILLS = {
