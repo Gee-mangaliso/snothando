@@ -125,6 +125,23 @@
     display: grid !important;
   }
 
+  /* Preserve header row layout */
+  .md\\:flex-row {
+    flex-direction: row !important;
+  }
+
+  .md\\:items-center {
+    align-items: center !important;
+  }
+
+  .md\\:pl-12 {
+    padding-left: 3rem !important;
+  }
+
+  .md\\:items-start {
+    align-items: flex-start !important;
+  }
+
   .md\\:gap-12 {
     gap: 1rem !important;
   }
