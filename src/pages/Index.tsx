@@ -1,8 +1,17 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase, Building, Mail, MapPin, Phone, Printer, User } from "lucide-react";
+import { Building, Download, FileImage, Mail, MapPin, Phone, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useRef, useCallback } from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 
 const SKILLS = {
@@ -55,18 +64,60 @@ const PROJECTS = [
 ];
 
 const Index = () => {
+  const cvRef = useRef<HTMLDivElement>(null);
+
+  const captureCanvas = useCallback(async () => {
+    if (!cvRef.current) return null;
+    return html2canvas(cvRef.current, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: "#111318",
+    });
+  }, []);
+
+  const downloadPDF = useCallback(async () => {
+    const canvas = await captureCanvas();
+    if (!canvas) return;
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "mm", "a4");
+    const pdfW = pdf.internal.pageSize.getWidth();
+    const pdfH = (canvas.height * pdfW) / canvas.width;
+    pdf.addImage(imgData, "PNG", 0, 0, pdfW, pdfH);
+    pdf.save("Mangaliso_Snothando_CV.pdf");
+  }, [captureCanvas]);
+
+  const downloadImage = useCallback(async () => {
+    const canvas = await captureCanvas();
+    if (!canvas) return;
+    const link = document.createElement("a");
+    link.download = "Mangaliso_Snothando_CV.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  }, [captureCanvas]);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div ref={cvRef} className="min-h-screen bg-background">
       {/* Header */}
       <header className="relative border-b border-border bg-[#102C3C]">
-        <Button
-          onClick={() => window.print()}
-          variant="outline"
-          size="sm"
-          className="absolute right-4 top-4 print:hidden border-primary/30 text-primary hover:bg-primary/10"
-        >
-          <Printer className="mr-1.5 h-3.5 w-3.5" /> Print
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="outline"
+              size="sm"
+              className="absolute right-4 top-4 print:hidden border-primary/30 text-primary hover:bg-primary/10"
+            >
+              <Download className="mr-1.5 h-3.5 w-3.5" /> Download
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem onClick={downloadPDF}>
+              <Download className="mr-2 h-4 w-4" /> Download as PDF
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={downloadImage}>
+              <FileImage className="mr-2 h-4 w-4" /> Download as Image
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:gap-[350px] md:py-14">
           <div className="md:pl-12">
             <h1 className="font-mono text-4xl font-bold tracking-tight text-primary md:text-5xl">
