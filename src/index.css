@@ -112,9 +112,9 @@
     min-height: auto !important;
     height: auto !important;
     max-height: 100vh !important;
-    transform: scale(0.62);
+    transform: scale(0.65);
     transform-origin: top left;
-    width: 161.29%; /* 1/0.62 */
+    width: 153.85%; /* 1/0.65 */
     overflow: hidden !important;
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
