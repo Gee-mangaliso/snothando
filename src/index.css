@@ -89,7 +89,7 @@
 @media print {
   @page {
     size: A4;
-    margin: 8mm;
+    margin: 10mm;
   }
 
   * {
@@ -101,31 +101,30 @@
   html, body {
     background: hsl(220 20% 7%) !important;
     color: hsl(210 20% 90%) !important;
-    font-size: 75% !important;
+    font-size: 80% !important;
     overflow: hidden !important;
     height: auto !important;
   }
 
-  /* Fit on one page */
+  /* Fit on one page — scale the whole CV wrapper */
   .min-h-screen {
     min-height: auto !important;
     height: auto !important;
-    transform: scale(0.72);
-    transform-origin: top center;
-    width: 138.89%; /* 1/0.72 */
-    margin-left: -19.44%;
+    transform: scale(0.68);
+    transform-origin: top left;
+    width: 147.06%; /* 1/0.68 */
     overflow: hidden !important;
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
   }
 
-  /* Preserve two-column grid */
+  /* Force two-column grid identical to preview */
   .md\\:grid-cols-\\[2fr_3fr\\] {
     grid-template-columns: 2fr 3fr !important;
     display: grid !important;
   }
 
-  /* Preserve header row layout */
+  /* Force header flex-row like preview */
   .md\\:flex-row {
     flex-direction: row !important;
   }
@@ -142,87 +141,49 @@
     align-items: flex-start !important;
   }
 
-  .md\\:gap-12 {
-    gap: 1rem !important;
-  }
-
-  /* Reduce header spacing */
-  .py-10, .md\\:py-14 {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-
   .md\\:gap-\\[350px\\] {
-    gap: 4rem !important;
+    gap: 6rem !important;
   }
 
-  /* Reduce main content spacing */
+  .md\\:gap-12 {
+    gap: 2rem !important;
+  }
+
+  /* Keep spacing close to preview */
+  .py-10, .md\\:py-14 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
   .py-12 {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 
   .space-y-10 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.6rem !important;
+    margin-top: 1.5rem !important;
   }
 
   .space-y-6 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.4rem !important;
+    margin-top: 1rem !important;
   }
 
   .space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.3rem !important;
+    margin-top: 0.75rem !important;
   }
 
   .gap-6 {
-    gap: 0.5rem !important;
+    gap: 1rem !important;
   }
 
   .gap-8 {
-    gap: 0.5rem !important;
+    gap: 1.5rem !important;
   }
 
-  /* Prevent page breaks inside elements */
+  /* Prevent page breaks */
   section, .border-l-2, [class*="CardContent"], main, header {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
-  }
-
-  /* Card padding reduction */
-  .p-5 {
-    padding: 0.5rem !important;
-  }
-
-  /* Separator margin */
-  .mb-4 {
-    margin-bottom: 0.25rem !important;
-  }
-
-  .mt-2 {
-    margin-top: 0.15rem !important;
-  }
-
-  /* Bullet spacing */
-  .space-y-1\\.5 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 0.15rem !important;
-  }
-
-  .mt-3 {
-    margin-top: 0.25rem !important;
-  }
-
-  .mt-1 {
-    margin-top: 0.15rem !important;
-  }
-
-  /* Heading sizes */
-  .text-4xl, .md\\:text-5xl {
-    font-size: 1.5rem !important;
-    line-height: 1.2 !important;
-  }
-
-  .gap-1\\.5 {
-    gap: 0.25rem !important;
   }
 
   /* Hide print button */
