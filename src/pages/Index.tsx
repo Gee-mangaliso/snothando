@@ -68,26 +68,25 @@ const Index = () => {
 
   const captureCanvas = useCallback(async () => {
     if (!cvRef.current) return null;
-    const el = cvRef.current;
-    const btn = el.querySelector("[data-download-btn]") as HTMLElement | null;
 
-    // Save original styles
-    const origWidth = el.style.width;
-    const origMinWidth = el.style.minWidth;
-    const origPos = el.style.position;
-    const origLeft = el.style.left;
+    // Clone the element so we don't disturb the live page
+    const clone = cvRef.current.cloneNode(true) as HTMLElement;
+    const btn = clone.querySelector("[data-download-btn]") as HTMLElement | null;
+    if (btn) btn.remove();
 
-    // Force desktop-width rendering for consistent capture
-    if (btn) btn.style.display = "none";
-    el.style.width = "1280px";
-    el.style.minWidth = "1280px";
-    el.style.position = "absolute";
-    el.style.left = "-9999px";
+    // Style clone for consistent desktop-width capture
+    clone.style.width = "1280px";
+    clone.style.minWidth = "1280px";
+    clone.style.position = "absolute";
+    clone.style.top = "0";
+    clone.style.left = "-9999px";
+    clone.style.zIndex = "-1";
+    document.body.appendChild(clone);
 
     // Wait for reflow
     await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
 
-    const canvas = await html2canvas(el, {
+    const canvas = await html2canvas(clone, {
       scale: 2,
       useCORS: true,
       backgroundColor: "#111318",
@@ -95,13 +94,7 @@ const Index = () => {
       windowWidth: 1280,
     });
 
-    // Restore original styles
-    el.style.width = origWidth;
-    el.style.minWidth = origMinWidth;
-    el.style.position = origPos;
-    el.style.left = origLeft;
-    if (btn) btn.style.display = "";
-
+    document.body.removeChild(clone);
     return canvas;
   }, []);
 
