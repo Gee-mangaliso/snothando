@@ -68,11 +68,15 @@ const Index = () => {
 
   const captureCanvas = useCallback(async () => {
     if (!cvRef.current) return null;
-    return html2canvas(cvRef.current, {
+    const btn = cvRef.current.querySelector("[data-download-btn]") as HTMLElement | null;
+    if (btn) btn.style.display = "none";
+    const canvas = await html2canvas(cvRef.current, {
       scale: 2,
       useCORS: true,
       backgroundColor: "#111318",
     });
+    if (btn) btn.style.display = "";
+    return canvas;
   }, []);
 
   const downloadPDF = useCallback(async () => {
@@ -102,6 +106,7 @@ const Index = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
+              data-download-btn
               variant="outline"
               size="sm"
               className="absolute right-4 top-4 print:hidden border-primary/30 text-primary hover:bg-primary/10"
