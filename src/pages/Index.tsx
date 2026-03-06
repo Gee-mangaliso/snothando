@@ -23,7 +23,7 @@ const SKILLS = {
   Databases: [{ name: "SQL", level: "Intermediate" }],
   "AI & Modern Development": [
     { name: "Prompt Engineering", level: "Advanced" },
-    { name: "AI-Assisted Development (LLMs – GPT5 Nano)", level: "" },
+    { name: "Vibe Coding (LLMs – GPT5 Nano)", level: "" },
   ],
   "Tools & Platforms": [
     { name: "Git" },
