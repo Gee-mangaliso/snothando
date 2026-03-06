@@ -121,7 +121,7 @@ const Index = () => {
   return (
     <div ref={cvRef} className="min-h-screen bg-background">
       {/* Header */}
-      <header className="relative border-b border-border bg-[#102C3C]">
+      <header className="relative border-b border-border bg-[#0A1628]">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
