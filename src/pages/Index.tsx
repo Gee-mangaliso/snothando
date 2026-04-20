@@ -49,6 +49,16 @@ const SKILLS = {
 
 const PROJECTS = [
   {
+    title: "Course Enrollment System",
+    period: "2025 (Completed)",
+    role: "Group Project | Student Course Enrollment System",
+    bullets: [
+      "A Java-based course management system developed as a 2nd year group project, allowing administrators to manage students and modules, while students can enroll in available courses.",
+      "Responsible for and mainly focused on the UI and the backend logic.",
+      "Designed database queries for module registration and handling validation.",
+    ],
+  },
+  {
     title: "ExamReady Hub",
     period: "2026 – Present",
     role: "Individual Project | Deployed Educational Web Platform",
