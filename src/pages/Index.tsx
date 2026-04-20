@@ -20,10 +20,21 @@ const SKILLS = {
     { name: "Python", level: "Intermediate" },
     { name: "JavaScript", level: "Intermediate" },
   ],
+  Frameworks: [{ name: "Laravel", level: "" }],
   Databases: [{ name: "SQL", level: "Intermediate" }],
   "AI & Modern Development": [
     { name: "Prompt Engineering", level: "Advanced" },
     { name: "Vibe Coding (LLMs – GPT5 Nano)", level: "" },
+  ],
+  "Software Design & Architecture": [
+    { name: "Domain-Driven Design", level: "" },
+    { name: "Object-Oriented Design", level: "" },
+    { name: "Design Patterns", level: "" },
+    { name: "Layered Architecture", level: "" },
+  ],
+  Testing: [
+    { name: "Unit Testing (JUnit)", level: "" },
+    { name: "Test-Driven Development (TDD)", level: "" },
   ],
   "Tools & Platforms": [
     { name: "Git" },
@@ -33,7 +44,6 @@ const SKILLS = {
     { name: "Replit" },
     { name: "Fuzen" },
     { name: "Lovable.ai" },
-    
   ],
 };
 
