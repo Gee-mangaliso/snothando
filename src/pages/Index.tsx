@@ -196,8 +196,9 @@ const Index = () => {
               in software development and AI-assisted solutions. Seeking a Work-Integrated
               Learning (WIL) placement, internship, or graduate opportunity within a
               technology-driven organization where I can contribute to innovative
-              software systems, apply my knowledge of Java, Python, databases, and AI
-              technologies, and continue developing industry-level technical expertise.
+              software systems, apply my knowledge of Java, JavaScript, Python,
+              Frameworks (Laravel, Spring Boot), databases, and AI technologies, and
+              continue developing industry-level technical expertise.
             </p>
           </section>
 
