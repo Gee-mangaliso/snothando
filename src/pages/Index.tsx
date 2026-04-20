@@ -73,7 +73,7 @@ const PROJECTS = [
   },
   {
     title: "Course Enrollment System",
-    period: "2026 – Present",
+    period: "2025 - Completed",
     role: "Group Project | Student Course Enrollment System",
     bullets: [
       "A Java-based course management system developed as a 2nd year group project, allowing administrators to manage students and modules, while students can enroll in available courses.",
