@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 220 20% 7%;
+    --background: 0 0% 0%;
     --foreground: 210 20% 90%;
 
     --card: 220 18% 10%;
@@ -99,7 +99,7 @@
   }
 
   html, body {
-    background: hsl(220 20% 7%) !important;
+    background: hsl(0 0% 0%) !important;
     color: hsl(210 20% 90%) !important;
     font-size: 76% !important;
     overflow: hidden !important;
