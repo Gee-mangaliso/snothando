@@ -21,8 +21,9 @@ const SKILLS = {
     { name: "JavaScript", level: "Intermediate" },
   ],
   Frameworks: [
-    { name: "Laravel", level: "" },
-    { name: "Spring Boot", level: "" },
+    { name: "Laravel", level: "Intermediate" },
+    { name: "Spring Boot", level: "Intermediate" },
+    { name: "Flask", level: "Intermediate" },
   ],
   Databases: [{ name: "SQL", level: "Intermediate" }],
   "AI & Modern Development": [
