@@ -20,7 +20,10 @@ const SKILLS = {
     { name: "Python", level: "Intermediate" },
     { name: "JavaScript", level: "Intermediate" },
   ],
-  Frameworks: [{ name: "Laravel", level: "" }],
+  Frameworks: [
+    { name: "Laravel", level: "" },
+    { name: "Spring Boot", level: "" },
+  ],
   Databases: [{ name: "SQL", level: "Intermediate" }],
   "AI & Modern Development": [
     { name: "Prompt Engineering", level: "Advanced" },
