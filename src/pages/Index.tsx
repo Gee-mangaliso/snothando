@@ -31,14 +31,14 @@ const SKILLS = {
     { name: "Vibe Coding (LLMs – GPT5 Nano)", level: "" },
   ],
   "Software Design & Architecture": [
-    { name: "Domain-Driven Design", level: "" },
-    { name: "Object-Oriented Design", level: "" },
-    { name: "Design Patterns", level: "" },
-    { name: "Layered Architecture", level: "" },
+    { name: "Domain-Driven Design", level: "Intermediate" },
+    { name: "Object-Oriented Design", level: "Intermediate" },
+    { name: "Design Patterns", level: "Intermediate" },
+    { name: "Layered Architecture", level: "Intermediate" },
   ],
   Testing: [
-    { name: "Unit Testing (JUnit)", level: "" },
-    { name: "Test-Driven Development (TDD)", level: "" },
+    { name: "Unit Testing (JUnit)", level: "Intermediate" },
+    { name: "Test-Driven Development (TDD)", level: "Intermediate" },
   ],
   "Tools & Platforms": [
     { name: "Git" },
